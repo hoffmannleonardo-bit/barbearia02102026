@@ -1,0 +1,676 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    background: #111;
+    color: #eee;
+
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* =========================
+   MENU
+========================= */
+
+.header {
+    width: 100%;
+
+    padding: 22px 7%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: #111;
+}
+
+
+.logo {
+    font-family: 'Oswald', sans-serif;
+
+    font-size: 23px;
+    font-weight: 600;
+
+    letter-spacing: 1px;
+}
+
+
+.logo span {
+    color: #c9a45c;
+}
+
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+
+nav a {
+    color: #ddd;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+
+
+nav a:hover {
+    color: #c9a45c;
+}
+
+
+.btn-menu {
+    padding: 11px 20px;
+
+    background: #c9a45c;
+
+    color: #111 !important;
+
+    font-weight: 600;
+}
+
+
+.btn-menu:hover {
+    background: #e0bd76;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 650px;
+
+    padding: 60px 7%;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    align-items: center;
+
+    gap: 70px;
+
+    background:
+        radial-gradient(
+            circle at 20% 50%,
+            #242424 0%,
+            #111 55%
+        );
+}
+
+
+.hero-text {
+    max-width: 570px;
+}
+
+
+.subtitulo,
+.titulo > span,
+.sobre-text > span,
+.agendar > span,
+.contato span {
+    color: #c9a45c;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    letter-spacing: 3px;
+}
+
+
+.hero h1 {
+    font-family: 'Oswald', sans-serif;
+
+    font-size: clamp(50px, 6vw, 82px);
+
+    line-height: 0.98;
+
+    margin: 18px 0 25px;
+
+    font-weight: 600;
+}
+
+
+.hero h1 span {
+    color: #c9a45c;
+}
+
+
+.hero p {
+    max-width: 500px;
+
+    color: #aaa;
+
+    font-size: 16px;
+
+    line-height: 1.8;
+}
+
+
+.botoes {
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+
+    margin-top: 35px;
+}
+
+
+.btn-principal {
+    display: inline-block;
+
+    padding: 14px 25px;
+
+    background: #c9a45c;
+
+    color: #111;
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+
+.btn-principal:hover {
+    background: #e0bd76;
+
+    transform: translateY(-2px);
+}
+
+
+.btn-secundario {
+    color: #ddd;
+
+    text-decoration: none;
+
+    font-size: 14px;
+}
+
+
+.btn-secundario:hover {
+    color: #c9a45c;
+}
+
+
+/* FOTO PRINCIPAL */
+
+.hero-image {
+    height: 510px;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+.hero-image::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            180deg,
+            transparent 55%,
+            rgba(0,0,0,0.85)
+        );
+}
+
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    filter: grayscale(15%);
+}
+
+
+.imagem-info {
+    position: absolute;
+
+    z-index: 2;
+
+    bottom: 30px;
+    left: 30px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+
+.imagem-info strong {
+    font-family: 'Oswald', sans-serif;
+
+    font-size: 25px;
+}
+
+
+.imagem-info span {
+    color: #ccc;
+
+    font-size: 12px;
+}
+
+
+/* =========================
+   SERVIÇOS
+========================= */
+
+.servicos {
+    padding: 100px 7%;
+
+    background: #f1eee8;
+
+    color: #171717;
+}
+
+
+.titulo {
+    text-align: center;
+
+    margin-bottom: 55px;
+}
+
+
+.titulo h2,
+.sobre-text h2,
+.agendar h2,
+.contato h2 {
+    font-family: 'Oswald', sans-serif;
+
+    font-weight: 600;
+}
+
+
+.titulo h2 {
+    font-size: 48px;
+
+    margin: 10px 0;
+}
+
+
+.titulo p {
+    color: #777;
+}
+
+
+.servicos-grid {
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+
+.servico {
+    padding: 35px;
+
+    background: #fff;
+
+    transition: 0.3s;
+}
+
+
+.servico:hover {
+    transform: translateY(-7px);
+
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+}
+
+
+.servico.principal {
+    background: #1b1b1b;
+
+    color: white;
+}
+
+
+.numero {
+    color: #c9a45c;
+
+    font-family: 'Oswald', sans-serif;
+
+    font-size: 20px;
+
+    margin-bottom: 35px;
+}
+
+
+.servico h3 {
+    font-family: 'Oswald', sans-serif;
+
+    font-size: 27px;
+
+    margin-bottom: 15px;
+}
+
+
+.servico p {
+    color: #777;
+
+    line-height: 1.7;
+
+    min-height: 80px;
+}
+
+
+.servico.principal p {
+    color: #aaa;
+}
+
+
+.preco {
+    margin-top: 25px;
+
+    font-family: 'Oswald', sans-serif;
+
+    font-size: 27px;
+
+    color: #c9a45c;
+}
+
+
+/* =========================
+   SOBRE
+========================= */
+
+.sobre {
+    padding: 110px 7%;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 80px;
+
+    align-items: center;
+
+    background: #111;
+}
+
+
+.sobre-image {
+    height: 500px;
+
+    overflow: hidden;
+}
+
+
+.sobre-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+.sobre-text h2 {
+    font-size: 48px;
+
+    line-height: 1.05;
+
+    margin: 15px 0 25px;
+}
+
+
+.sobre-text > p {
+    color: #aaa;
+
+    line-height: 1.8;
+
+    margin-bottom: 15px;
+
+    max-width: 520px;
+}
+
+
+.qualidades {
+    margin-top: 30px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 14px;
+}
+
+
+.qualidades div {
+    color: #ddd;
+
+    font-size: 14px;
+}
+
+
+.qualidades strong {
+    color: #c9a45c;
+
+    margin-right: 10px;
+}
+
+
+/* =========================
+   AGENDAR
+========================= */
+
+.agendar {
+    padding: 100px 20px;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            rgba(20,20,20,0.9),
+            rgba(20,20,20,0.9)
+        ),
+        url("https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=1600&q=80");
+
+    background-size: cover;
+
+    background-position: center;
+}
+
+
+.agendar h2 {
+    font-size: 55px;
+
+    margin: 12px 0;
+}
+
+
+.agendar p {
+    color: #aaa;
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================
+   CONTATO
+========================= */
+
+.contato {
+    padding: 75px 7%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+    background: #181818;
+}
+
+
+.contato h2 {
+    font-size: 40px;
+
+    margin-top: 10px;
+}
+
+
+.contatos {
+    color: #aaa;
+
+    line-height: 2.2;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    padding: 25px 7%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    background: #0b0b0b;
+
+    color: #777;
+
+    font-size: 12px;
+}
+
+
+/* =========================
+   RESPONSIVO
+========================= */
+
+@media (max-width: 850px) {
+
+    .header {
+        flex-direction: column;
+
+        gap: 20px;
+    }
+
+
+    nav {
+        gap: 15px;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+
+    .hero {
+        grid-template-columns: 1fr;
+
+        padding-top: 40px;
+    }
+
+
+    .hero-image {
+        height: 400px;
+    }
+
+
+    .servicos-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .sobre {
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+    }
+
+
+    .sobre-image {
+        height: 400px;
+    }
+
+
+    .contato,
+    footer {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+}
+
+
+@media (max-width: 550px) {
+
+    .header,
+    .hero,
+    .servicos,
+    .sobre {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+
+    .titulo h2,
+    .sobre-text h2 {
+        font-size: 38px;
+    }
+
+
+    .agendar h2 {
+        font-size: 40px;
+    }
+
+
+    .botoes {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+
+    .hero-image {
+        height: 350px;
+    }
+
+}
